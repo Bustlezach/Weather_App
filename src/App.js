@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+
 function App() {
-  const API_key = '4c21510b77188a2a580452601f2f1fa8';
+  const API_key = process.env.REACT_APP_WEATHER_API_KEY;
   const [data, setData] = useState({});
   const [location, setLocation] = useState('');
+  console.log(API_key);
 
   const searchLocaion = (event) => {
     event.preventDefault();
